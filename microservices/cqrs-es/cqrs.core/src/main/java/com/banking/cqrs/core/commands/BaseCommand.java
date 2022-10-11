@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public abstract class BaseCommand extends Message {
 
-    public BaseCommand(String id) {
+    protected BaseCommand(String id) {
         super(id);
     }
 }

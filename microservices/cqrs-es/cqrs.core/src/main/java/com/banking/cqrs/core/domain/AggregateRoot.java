@@ -27,7 +27,7 @@ public abstract class AggregateRoot {
         this.version = version;
     }
 
-    public List<BaseEvent> getUncommitedChanges() {
+    public List<BaseEvent> getUncommittedChanges() {
         return this.changes;
     }
 
@@ -45,7 +45,7 @@ public abstract class AggregateRoot {
         }catch (Exception e) {
             logger.log(Level.SEVERE, MessageFormat.format("Errores aplicando el evento al aggregate {0}", e.getMessage()));
         }finally {
-            if (isNewEvent) {
+            if (Boolean.TRUE.equals(isNewEvent)) {
                 this.changes.add(event);
             }
         }

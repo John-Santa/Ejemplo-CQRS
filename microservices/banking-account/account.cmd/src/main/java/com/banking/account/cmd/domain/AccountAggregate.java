@@ -33,7 +33,7 @@ public class AccountAggregate extends AggregateRoot {
     }
 
     public void depositFunds(Double amount) {
-        if (!this.active) {
+        if (!Boolean.TRUE.equals(this.active)) {
             throw new IllegalStateException("Los fondos no pueden ser depositados en esta cuenta");
         }
         if (amount <= 0) {
@@ -52,7 +52,7 @@ public class AccountAggregate extends AggregateRoot {
     }
 
     public void withdrawFunds(double amount) {
-        if (!this.active) {
+        if (!Boolean.TRUE.equals(this.active)) {
             throw new IllegalStateException("La cuenta bancaria esta cerrada");
         }
         if (amount <= 0) {
@@ -74,7 +74,7 @@ public class AccountAggregate extends AggregateRoot {
     }
 
     public void closeAccount() {
-        if (!this.active) {
+        if (!Boolean.TRUE.equals(this.active)) {
             throw new IllegalStateException("La cuenta bancaria ya esta cerrada");
         }
         if (this.balance > 0) {
