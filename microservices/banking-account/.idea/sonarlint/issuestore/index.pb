@@ -35,8 +35,6 @@ F
 0account.query/src/main/resources/application.yml,e/1/e178adae27c14f1f16c4af50dc7e5b467b2f9d72
 @
 account.cmd/mvnw,3/7/3785c2fe37459b025ebfbd08897c65163724ceb4
-y
-Iaccount.cmd/src/main/java/com/banking/account/cmd/CommandApplication.java,7/5/7556e3b804812ba3423828ca69a5bd0e474075de
 w
 Gaccount.cmd/src/test/java/com/banking/account/cmd/ApplicationTests.java,9/6/9624cc9a38870fc5efd06f4d4d9be7a67bb9e180
 ‡
