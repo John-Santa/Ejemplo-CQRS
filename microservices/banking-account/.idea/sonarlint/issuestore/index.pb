@@ -29,8 +29,6 @@ C
 account.cmd/HELP.md,3/5/350766c0355237511d80072a9a85eff9625a37b2
 F
 account.cmd/.gitignore,6/5/65386d3012bb393e09515524203d374420b530bf
-`
-0account.query/src/main/resources/application.yml,e/1/e178adae27c14f1f16c4af50dc7e5b467b2f9d72
 @
 account.cmd/mvnw,3/7/3785c2fe37459b025ebfbd08897c65163724ceb4
 w
