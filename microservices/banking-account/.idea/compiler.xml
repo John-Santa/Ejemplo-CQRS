@@ -15,10 +15,10 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="account.cmd" options="-parameters" />
-      <module name="account.common" options="-parameters" />
+      <module name="account.cmd" options="" />
+      <module name="account.common" options="" />
       <module name="account.query" options="-parameters" />
-      <module name="cqrs.core" options="-parameters" />
+      <module name="cqrs.core" options="" />
     </option>
   </component>
 </project>

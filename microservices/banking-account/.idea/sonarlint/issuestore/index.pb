@@ -13,8 +13,6 @@ B
 account.query/mvnw,c/c/cc3916f35aa885833fa7f5dbefda369c4036d44c
 F
 account.query/mvnw.cmd,f/b/fbfec6755b739a144a774fcd7f8e0d3fba7e728b
-E
-account.query/pom.xml,9/a/9a10aa09b3f041ec0124ad53c7a2622dd2077540
 c
 3account.query/.mvn/wrapper/maven-wrapper.properties,a/c/ac8a285d6069fc6701f08a3a8ccd096e9d8ebe09
 a
@@ -65,3 +63,11 @@ Waccount.cmd/src/main/java/com/banking/account/cmd/api/command/WithdrawFundsComm
 Vaccount.cmd/src/main/java/com/banking/account/cmd/api/command/CloseAccountCommand.java,7/6/76c45862d04ef03597f621519528bb5f49372910
 †
 Vaccount.common/src/main/java/com/banking/account/common/events/AccountOpenedEvent.java,0/3/0345bedd184b0f89a852a6a6748c025ebb9ea2b8
+‚
+Raccount.cmd/src/main/java/com/banking/account/cmd/domain/EventStoreRepository.java,2/2/22a1b5fb21b6d9660b85633f6976c9126a281578
+Ž
+^account.cmd/src/main/java/com/banking/account/cmd/infrastructure/AccountCommandDispatcher.java,e/1/e18374921ff89915a4c4236b6b22c2b1b09a242f
+‘
+aaccount.cmd/src/main/java/com/banking/account/cmd/infrastructure/AccountEventSourcingHandler.java,4/1/416e0fbd1496b31bd3de227a06a4306691996025
+~
+Naccount.cmd/src/main/java/com/banking/account/cmd/domain/AccountAggregate.java,d/1/d12979de6a8cbc9c395be88c1d906c906a2ccf53
