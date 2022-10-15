@@ -17,7 +17,7 @@ public class AccountQueryDispatcher implements QueryDispatcher {
     private final Map<Class<? extends BaseQuery>, List<QueryHandlerMethod>> routes = new HashMap<>();
 
     @Override
-    public <T extends BaseQuery> void registerHandler(Class<T> type, QueryHandlerMethod handler) {
+    public <T extends BaseQuery> void registerHandler(Class<T> type, QueryHandlerMethod<T> handler) {
         var handlers = routes.computeIfAbsent(type, k -> new LinkedList<>());
         handlers.add(handler);
     }

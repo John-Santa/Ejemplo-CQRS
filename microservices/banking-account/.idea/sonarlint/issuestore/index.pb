@@ -18,8 +18,6 @@ c
 a
 1account.cmd/.mvn/wrapper/maven-wrapper.properties,6/a/6a3f60eaf192c060b96e25c067b2ea7fd9d3c2e5
 {
-Kaccount.query/src/main/java/com/banking/account/query/QueryApplication.java,f/5/f5012a7283e2c20b3ac8363b3bb7be93966e5b65
-{
 Kaccount.query/src/test/java/com/banking/account/query/ApplicationTests.java,0/8/083bd60c4bbfddd6406812f1102ab7873ebfe18e
 D
 account.cmd/mvnw.cmd,1/e/1e262ed36dba82d6221619782c7fdcdda56a1c56
