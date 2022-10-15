@@ -3,7 +3,7 @@ package com.banking.account.query.infrastructure.consumers;
 import com.banking.account.common.events.AccountClosedEvent;
 import com.banking.account.common.events.AccountOpenedEvent;
 import com.banking.account.common.events.FundsDepositedEvent;
-import com.banking.account.common.events.FundsWithdrawnEvent;
+import com.banking.account.common.events.FundsWithdrawEvent;
 import com.banking.account.query.infrastructure.handlers.EventHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -33,7 +33,7 @@ public class AccountEventConsumer implements EventConsumer{
 
     @KafkaListener(topics="FundsWithdrawnEvent", groupId="${spring.kafka.consumer.group-id}")
     @Override
-    public void consume(@Payload FundsWithdrawnEvent event, Acknowledgment ack) {
+    public void consume(@Payload FundsWithdrawEvent event, Acknowledgment ack) {
         eventHandler.on(event);
         ack.acknowledge();
     }

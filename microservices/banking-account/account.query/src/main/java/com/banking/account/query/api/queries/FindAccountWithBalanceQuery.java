@@ -8,8 +8,6 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class FindAccountWithBalanceQuery extends BaseQuery {
-
     private double balance;
     private EqualityType equalityType;
-
 }
