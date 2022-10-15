@@ -1,5 +1,5 @@
 server:
-  port: 5001
+  port: 5002
 
 spring:
   jpa:
@@ -9,8 +9,8 @@ spring:
       ddl-auto: update
   datasource:
     url: jdbc:mysql://localhost:3306/bankingAccount?createDatabaseIfNotExist=true
-    username: root
-    password: VaxiDrez2005$
+    username: "root"
+    password: "VaxiDrez2005$"
   kafka:
     listener:
       ack-mode: MANUAL_IMMEDIATE
@@ -24,4 +24,4 @@ spring:
         spring:
           json:
             trusted:
-              packager: "*"
+              packages: '*'

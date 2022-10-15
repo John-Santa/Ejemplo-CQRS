@@ -28,7 +28,7 @@ public class AccountEventStore implements EventStore {
     public void saveEvents(String aggregateId, Iterable<? extends BaseEvent> events, int expectedVersion) {
         var eventStream = eventStoreRepository.findByAggregateIdentifier(aggregateId);
 
-        if (eventStream.get(eventStream.size()-1).getVersion() != expectedVersion && expectedVersion != -1) {
+        if(expectedVersion != -1 && eventStream.get(eventStream.size() - 1).getVersion() != expectedVersion){
             throw new ConcurrencyException();
         }
 

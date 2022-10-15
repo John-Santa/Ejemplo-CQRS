@@ -17,12 +17,10 @@ import java.util.Date;
 @Builder
 @Entity
 public class BankAccount extends BaseEntity {
-
     @Id
     private String id;
     private String accountHolder;
     private Date creationDate;
     private AccountType accountType;
     private double balance;
-
 }

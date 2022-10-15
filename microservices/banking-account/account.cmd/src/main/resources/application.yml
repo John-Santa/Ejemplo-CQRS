@@ -1,5 +1,5 @@
 server:
-  port: 5000
+  port: 5001
 
 spring:
   data:
@@ -7,6 +7,9 @@ spring:
       host: localhost
       port: 27017
       database: bankingAccount
+      username: "vaxidrez"
+      password: "VaxiDrez2005$"
+      authentication-database: admin
   kafka:
     producer:
       bootstrap-servers: localhost:9092

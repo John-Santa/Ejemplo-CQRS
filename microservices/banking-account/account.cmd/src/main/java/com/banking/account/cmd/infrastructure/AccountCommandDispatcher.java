@@ -24,7 +24,8 @@ public class AccountCommandDispatcher implements CommandDispatcher {
     @Override
     public void send(BaseCommand command) {
         var handlers = routes.get(command.getClass());
-        if (handlers == null || handlers.isEmpty()) {
+
+        if (handlers == null || handlers.size() == 0) {
             throw new RuntimeException("No handler registered for command " + command.getClass().getName());
         }
 
@@ -33,6 +34,7 @@ public class AccountCommandDispatcher implements CommandDispatcher {
         }
 
         handlers.get(0).handle(command);
+
     }
 
 }
