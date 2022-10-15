@@ -2,7 +2,6 @@ package com.banking.account.cmd.infrastructure;
 
 import com.banking.account.cmd.domain.AccountAggregate;
 import com.banking.cqrs.core.domain.AggregateRoot;
-import com.banking.cqrs.core.events.BaseEvent;
 import com.banking.cqrs.core.handlers.EventSourcingHandler;
 import com.banking.cqrs.core.infrastructure.EventStore;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import java.util.Comparator;
 
 @Service
 public class AccountEventSourcingHandler implements EventSourcingHandler<AccountAggregate> {
-
     @Autowired
     private EventStore eventStore;
 
@@ -26,10 +24,9 @@ public class AccountEventSourcingHandler implements EventSourcingHandler<Account
     public AccountAggregate getById(String id) {
         var aggregate = new AccountAggregate();
         var events = eventStore.getEvent(id);
-
-        if (events != null && !events.isEmpty()) {
+        if(events != null && !events.isEmpty()){
             aggregate.replayEvents(events);
-            var latestVersion = events.stream().map(BaseEvent::getVersion).max(Comparator.naturalOrder());
+            var latestVersion = events.stream().map(x -> x.getVersion()).max(Comparator.naturalOrder());
             aggregate.setVersion(latestVersion.get());
         }
 

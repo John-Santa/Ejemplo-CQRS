@@ -18,15 +18,18 @@ public class CommandApplication {
 	private CommandHandler commandHandler;
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(CommandApplication.class, args);
 	}
 
 	@PostConstruct
-	public void registerHandlers() {
+	public void registerHandlers(){
 		commandDispatcher.registerHandler(OpenAccountCommand.class, commandHandler::handle);
 		commandDispatcher.registerHandler(DepositFundsCommand.class, commandHandler::handle);
 		commandDispatcher.registerHandler(WithdrawFundsCommand.class, commandHandler::handle);
 		commandDispatcher.registerHandler(CloseAccountCommand.class, commandHandler::handle);
 	}
+
+
 
 }

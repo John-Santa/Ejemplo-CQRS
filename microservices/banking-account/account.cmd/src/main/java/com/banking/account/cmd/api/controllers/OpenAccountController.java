@@ -18,29 +18,30 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @RestController
-@RequestMapping("/api/v1/openBankAccount")
+@RequestMapping(path = "/api/v1/openBankAccount")
 public class OpenAccountController {
-
     private final Logger logger = Logger.getLogger(OpenAccountController.class.getName());
 
     @Autowired
-    private CommandDispatcher commandDispatcher;
+    private CommandDispatcher commonDispatcher;
 
     @PostMapping
-    public ResponseEntity<BaseResponse> openAccount(@RequestBody OpenAccountCommand command) {
+    public ResponseEntity<BaseResponse> openAccount(@RequestBody OpenAccountCommand command){
         var id = UUID.randomUUID().toString();
         command.setId(id);
+
         try {
-            commandDispatcher.send(command);
-            return new ResponseEntity<> (new OpenAccountResponse("Account successfully opened", id), HttpStatus.CREATED);
-        } catch (IllegalStateException illegalStateException) {
-            logger.log(Level.WARNING, MessageFormat.format("No se pudo generar la cuenta de banco - {0}", illegalStateException.toString()));
-            return new ResponseEntity<>(new BaseResponse(illegalStateException.toString()), HttpStatus.BAD_REQUEST);
-        } catch (Exception exception) {
+            commonDispatcher.send(command);
+            return new ResponseEntity<>(new OpenAccountResponse("La cuenta del banco se ha creado exitosamente", id), HttpStatus.CREATED);
+        }catch(IllegalStateException e){
+            logger.log(Level.WARNING, MessageFormat.format("No se pudo generar la cuenta de banco - {0}", e.toString()));
+            return new ResponseEntity<>(new BaseResponse(e.toString()), HttpStatus.BAD_REQUEST);
+        }catch (Exception e){
             var safeErrorMessage = MessageFormat.format("Errores mientras procesaba el request - {0}", id);
-            logger.log(Level.SEVERE, safeErrorMessage, exception);
+            logger.log(Level.SEVERE, safeErrorMessage, e);
             return new ResponseEntity<>(new OpenAccountResponse(safeErrorMessage, id), HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
 
 }

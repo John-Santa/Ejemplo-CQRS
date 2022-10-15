@@ -7,7 +7,7 @@ spring:
       host: localhost
       port: 27017
       database: bankingAccount
-      username: "vaxidrez"
+      username: vaxidrez
       password: "VaxiDrez2005$"
       authentication-database: admin
   kafka:
@@ -15,3 +15,5 @@ spring:
       bootstrap-servers: localhost:9092
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+

@@ -1,0 +1,37 @@
+
+~
+java:S1192)"aDefine a constant instead of duplicating this literal "Se realizo la consulta con exito" 4 times.(ò×¯å8¬¼öâ½0
+
+java:S1192/"_Define a constant instead of duplicating this literal "Errores ejecutando la consulta" 4 times.(öÎ‰ùÿÿÿÿ8­¼öâ½0
+¦
+java:S4449%"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(àÂĞ‘8ì¼öâ½0
+¦
+java:S4449k"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(àÂĞ‘8í¼öâ½0
+¦
+java:S4449:"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(àÂĞ‘8ì¼öâ½0
+¦
+java:S4449P"ˆAnnotate the parameter with @javax.annotation.Nullable in constructor declaration, or make sure that null can not be passed as argument.(àÂĞ‘8ì¼öâ½0
+[
+java:S1155$">Use isEmpty() to check whether the collection is empty or not.(ìı±8õ¼öâ½0
+j
+java:S5669)"MCast this argument to 'Object' to pass a single element to the vararg method.(ò×¯å8ø¼öâ½0
+B
+java:S3457)"%String contains no format specifiers.(ò×¯å8ø¼öâ½0
+[
+java:S11559">Use isEmpty() to check whether the collection is empty or not.(ìı±8ı¼öâ½0
+j
+java:S5669>"MCast this argument to 'Object' to pass a single element to the vararg method.(ò×¯å8ÿ¼öâ½0
+B
+java:S3457>"%String contains no format specifiers.(ò×¯å8€½öâ½0
+[
+java:S1155O">Use isEmpty() to check whether the collection is empty or not.(ìı±8ƒ½öâ½0
+j
+java:S5669T"MCast this argument to 'Object' to pass a single element to the vararg method.(ò×¯å8„½öâ½0
+B
+java:S3457T"%String contains no format specifiers.(ò×¯å8…½öâ½0
+[
+java:S1155j">Use isEmpty() to check whether the collection is empty or not.(ìı±8ˆ½öâ½0
+j
+java:S5669o"MCast this argument to 'Object' to pass a single element to the vararg method.(ò×¯å8Š½öâ½0
+B
+java:S3457o"%String contains no format specifiers.(ò×¯å8‹½öâ½0

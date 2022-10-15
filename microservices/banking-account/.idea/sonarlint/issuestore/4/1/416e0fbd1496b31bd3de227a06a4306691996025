@@ -1,3 +1,5 @@
 
 w
-java:S3655!"ZCall "latestVersion.isPresent()" or "!latestVersion.isEmpty()" before accessing the value.(Ÿž†ù8¤Ø±Æ¼0
+java:S3655"ZCall "latestVersion.isPresent()" or "!latestVersion.isEmpty()" before accessing the value.(Ÿž†ù8¤Ø±Æ¼0
+^
+java:S1612"BReplace this lambda with method reference 'BaseEvent::getVersion'.(Àµ½8äá¢ã½0

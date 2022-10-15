@@ -6,16 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class AccountCommandHandler implements CommandHandler{
-
+public class AccountCommandHandler implements CommandHandler {
     @Autowired
-    EventSourcingHandler<AccountAggregate> eventSourcingHandler;
+    private EventSourcingHandler<AccountAggregate> eventSourcingHandler;
 
     @Override
     public void handle(OpenAccountCommand command) {
         var aggregate = new AccountAggregate(command);
         eventSourcingHandler.save(aggregate);
-
     }
 
     @Override
@@ -28,8 +26,8 @@ public class AccountCommandHandler implements CommandHandler{
     @Override
     public void handle(WithdrawFundsCommand command) {
         var aggregate = eventSourcingHandler.getById(command.getId());
-        if (aggregate.getBalance() < command.getAmount()) {
-            throw new IllegalStateException("Fondos insuficientes, no se puede retirar dinero");
+        if (command.getAmount() > aggregate.getBalance()){
+          throw new IllegalStateException("Insuficientes fondos, no se puede retirar dinero");
         }
 
         aggregate.withdrawFunds(command.getAmount());
